@@ -1,8 +1,7 @@
-
 | SL | Topics |
 |--|--|
-| 1 | [Pre-compile C++ header file](#pre-compile-c++-header-file)| 
-| 2 | [C++ template for competitive programming](#c++-template-for-competitive-programming)
+| 1 | [Pre-compile C++ header file](#pre-compile-c-header-file-bitsstdch)| 
+| 2 | [C++ template for competitive programming](#c-template-for-competitive-programming)
 | 3 | [Sublime Text 4](#sublime-text-4) |
 
 # Pre-compile C++ header file <bits/stdc++.h>
