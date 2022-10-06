@@ -3,7 +3,7 @@
 |--|--|
 | 1 | [Sublime Text 4 setup](#sublime-text-4) |
 | 2 | [Pre-compile C++ header file](#pre-compile-c-header-file-bitsstdch)|
-| 3 | [Create custom snippets](#create-custom-snippets)
+| 3 | [Create custom snippets](#create-custom-snippets-on-sublime-text-4)
 
 # Sublime Text 4
 
