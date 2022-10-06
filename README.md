@@ -1,51 +1,9 @@
+
 | SL | Topics |
 |--|--|
-| 1 | [Pre-compile C++ header file](#pre-compile-c-header-file-bitsstdch)| 
-| 2 | [C++ template for competitive programming](#c-template-for-competitive-programming)
-| 3 | [Sublime Text 4](#sublime-text-4) |
-
-# Pre-compile C++ header file <bits/stdc++.h>
-1. Open the directory: ``C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits``
-2. Then press **shift + right** click of the mouse and select **open powershell window here**.
-3. Then paste the command ``g++ stdc++.h -std=c++17`` and hit enter
-
-
-# C++ template for competitive programming
-For updated template visit this link: [C++ template for Competitive programming](https://github.com/dabananda/code-editors-setup/blob/main/cp-template.cpp)
-
-    #include <bits/stdc++.h>
-    
-    using namespace std;
-    
-    typedef long long ll;
-    typedef vector<int> vi;
-    typedef vector<long long> vl;
-    
-    #define TLE ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    
-    class Solution {
-    public:
-      void process(int t) {
-    
-      }
-    };
-    
-    int main() {
-      TLE;
-    
-      freopen("input.txt", "r", stdin);
-      freopen("output.txt", "w", stdout);
-    
-      Solution s;
-      int testCase, i = 1;
-      cin >> testCase;
-      while (testCase--) {
-        s.process(i++);
-      }
-    
-      return 0;
-    }
-
+| 1 | [Sublime Text 4 setup](#sublime-text-4) |
+| 2 | [Pre-compile C++ header file](#pre-compile-c-header-file-bitsstdch)|
+| 3 | [Create custom snippets](#create-custom-snippets)
 
 # Sublime Text 4
 
@@ -70,19 +28,19 @@ That's all for preferences
 
 ### File Input & Output
 
-The following build system for sublime text will take input from **input.txt** file and show output in **output.txt**
+The following build system for sublime text will take input from **inputf.in** file and print output in **outputf.out**.The build file extension will be ``.sublime-build``.
 
     {
-      "cmd": ["g++.exe", "-std=c++17", "${file}",
-              "-o", "${file_base_name}.exe",
-              "&&", "${file_base_name}.exe<input.txt>output.txt"],
-      "shell":true,
-      "working_dir":"$file_path",
-      "selector":"source.cpp"
+        "cmd": ["g++.exe", "-std=c++17", "${file}",
+                "-o", "${file_base_name}.exe",
+                "&&", "${file_base_name}.exe<inputf.in>outputf.out"],
+        "shell":true,
+        "working_dir":"$file_path",
+        "selector":"source.cpp"
     }
 
 ### Console Input & Output
-The following sublime build system will take input from **console** (cmd) and show output.
+The following sublime build system will take input from **console** (cmd) and print output.
 
     {
       "cmd": ["g++.exe", "-std=c++17", "-o", "$file_base_name", "$file", "&&", "start", "cmd", "/c", "$file_base_name & echo. & echo. & pause"],
@@ -105,3 +63,75 @@ Save the build file to ``C:\Users\${user}\AppData\Roaming\Sublime Text\Packages\
 	- 64bit installs are typically in ``C:\Program Files\Sublime Text\``
 	- 32bit installs on a 64bit version of Windows will be in ``C:\Program Files (x86)\Sublime Text\``
 	- 32bit installs on a 32bit version of Windows will be in ``C:\Program Files\Sublime Text\``
+
+
+# Pre-compile C++ header file <bits/stdc++.h>
+1. Open the directory: ``C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits``
+2. Then press **shift + right** click of the mouse and select **open powershell window here**.
+3. Then paste the command ``g++ stdc++.h -std=c++17`` and hit enter
+
+
+# Create custom snippets on Sublime Text 4
+There is a website for generating snippets.
+Link: [Snippet Generator](https://snippet-generator.app/)
+You can use this website to generate snippets for Visual studio code, Sublime text and Atom.
+
+## Sublime text C++ template snippet for competitive programming
+Create a new snippet from Sublime Text 4: ``Tools > Developer > New Snippet``
+
+Copy the following code and save it as **cp.sublime-snippet**.
+File saving directory: ``C:\Users\${user}\AppData\Roaming\Sublime Text\Packages\User``
+
+    <snippet>
+      <content><![CDATA[
+    #include <bits/stdc++.h>
+    
+    using namespace std;
+    
+    typedef long long ll;
+    typedef vector<int> vi;
+    typedef vector<long long> vl;
+    
+    #define TLE ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    
+    void Solution(int t) {
+      // start coding from here
+    }
+    
+    int main() {
+      TLE;
+      int test_case, t = 1;
+      cin >> test_case;
+      while (test_case--) {
+        Solution(t++);
+      }
+    
+      return 0;
+    }
+    ]]></content>
+      <tabTrigger>cp</tabTrigger>
+      <description>C++ template for competitive programming</description>
+      <!-- Optional: Set a scope to limit where the snippet will trigger -->
+      <!-- <scope >source.python</scope > -->
+    </snippet>
+
+## Sublime text basic C++ template snippet
+Copy the following code and save it as **cpp.sublime-snippet**.
+File saving directory: ``C:\Users\${user}\AppData\Roaming\Sublime Text\Packages\User``
+
+    <snippet>
+      <content><![CDATA[
+    #include <iostream>
+    
+    using namespace std;
+    
+    int main() {
+    
+    	return 0;
+    }
+    ]]></content>
+      <tabTrigger>cpp</tabTrigger>
+      <description>Basic C++ template</description>
+      <!-- Optional: Set a scope to limit where the snippet will trigger -->
+      <!-- <scope >source.python</scope > -->
+    </snippet>

@@ -5,15 +5,18 @@ using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
 typedef vector<long long> vl;
+typedef pair<int, int> pii;
 
-#define TLE ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define TLE ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)
+#define REP(i, n) for (i = 0; i < n; i++)
+#define REP2(i, m, n) for (i = m; i <= n; i++)
+#define REP3(i, m, n) for (i = m; i >= n; i--)
+#define PB push_back
+#define MP make_pair
 
-class Solution {
-public:
-  void process(int t) {
-
-  }
-};
+void TestCase(int t) {
+  
+}
 
 int main() {
   TLE;
@@ -21,12 +24,11 @@ int main() {
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
 
-  Solution s;
-  int testCase, i = 1;
+  int testCase, t = 1;
   cin >> testCase;
-  while (testCase--) {
-    s.process(i++);
-  }
+  while(testCase--) {
+    TestCase(t++);
+  } 
 
   return 0;
 }
