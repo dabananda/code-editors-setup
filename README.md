@@ -1,3 +1,53 @@
+
+| SL | Topics |
+|--|--|
+| 1 | [Pre-compile C++ header file](#pre-compile-c++-header-file)| 
+| 2 | [C++ template for competitive programming](#c++-template-for-competitive-programming)
+| 3 | [Sublime Text 4](#sublime-text-4) |
+
+# Pre-compile C++ header file <bits/stdc++.h>
+1. Open the directory: ``C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits``
+2. Then press **shift + right** click of the mouse and select **open powershell window here**.
+3. Then paste the command ``g++ stdc++.h -std=c++17`` and hit enter
+
+
+# C++ template for competitive programming
+For updated template visit this link: [C++ template for Competitive programming](https://github.com/dabananda/code-editors-setup/blob/main/cp-template.cpp)
+
+    #include <bits/stdc++.h>
+    
+    using namespace std;
+    
+    typedef long long ll;
+    typedef vector<int> vi;
+    typedef vector<long long> vl;
+    
+    #define TLE ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    
+    class Solution {
+    public:
+      void process(int t) {
+    
+      }
+    };
+    
+    int main() {
+      TLE;
+    
+      freopen("input.txt", "r", stdin);
+      freopen("output.txt", "w", stdout);
+    
+      Solution s;
+      int testCase, i = 1;
+      cin >> testCase;
+      while (testCase--) {
+        s.process(i++);
+      }
+    
+      return 0;
+    }
+
+
 # Sublime Text 4
 
 Download and install **Sublime Text 4** from the following link.
