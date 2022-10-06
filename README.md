@@ -3,7 +3,7 @@
 |--|--|
 | 1 | [Sublime Text 4 setup](#sublime-text-4) |
 | 2 | [Pre-compile C++ header file](#pre-compile-c-header-file-bitsstdch)|
-| 3 | [Create custom snippets](#create-custom-snippets-on-sublime-text-4)
+| 3 | [Create custom snippets](#create-custom-snippets)
 
 # Sublime Text 4
 
@@ -135,3 +135,16 @@ File saving directory: ``C:\Users\${user}\AppData\Roaming\Sublime Text\Packages\
       <!-- Optional: Set a scope to limit where the snippet will trigger -->
       <!-- <scope >source.python</scope > -->
     </snippet>
+
+
+# Configure Google C++ Style 
+1. Install ``SublimeAStyleFormatter`` plugin
+2. Goto ``Preferences > Package Settings > SublimeAStyleFormatter > Settings - User`` and add the following configuration
+
+    {
+        "autoformat_on_save": true,
+        "options_default": {
+            "style": "google",
+        }
+    }
+Now whenever you will press ``crtl + s``, your file will be saved using google style syntax.
